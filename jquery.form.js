@@ -614,6 +614,8 @@ $.fn.clearFields = $.fn.clearInputs = function() {
 			this.checked = false;
 		else if (tag == 'select')
 			this.selectedIndex = -1;
+		else if (t == 'hidden' && !$(this).hasClass('no-clear'))
+			this.value = '';
 	});
 };
 
